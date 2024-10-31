@@ -22,6 +22,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Assets\" />
     <Folder Include="Services\" />
   </ItemGroup>
 </Project>
