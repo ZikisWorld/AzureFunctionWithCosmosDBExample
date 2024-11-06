@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace DataSyncFunctionApp.Models
 {
-    public class TableInfo
+    public class MappingModel
     {
-        public string TableName { get; set; }
-        public string ColumnName { get; set; }
+        public string ReferenceType { get; set; }
+        public string SqlQuery { get; set; }
         public string DocumentId { get; set; }
+        public string PartitionValue { get; set; }
     }
 }

@@ -9,6 +9,6 @@ namespace DataSyncFunctionApp.DataAccess
 {
     public interface ICosmosDataAccess
     {
-        Task UpsertDocumentAsync(string documentId, IEnumerable<DropdownData> data);
+        Task UpsertDocumentAsync(MappingModel mappingModel, IEnumerable<DropdownData> data);
     }
 }

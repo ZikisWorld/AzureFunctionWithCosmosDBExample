@@ -1,0 +1,14 @@
+[
+  {
+    "referenceType": "countries",
+    "sqlQuery": "SELECT CountryName AS Name FROM Countries",
+    "documentId": "CountryDoc",
+    "partitionValue": "CountriesDoc"
+  },
+  {
+    "referenceType": "cars",
+    "sqlQuery": "SELECT CarModel AS Name FROM Cars",
+    "documentId": "CarDoc",
+    "partitionValue": "CarsDoc"
+  }
+]

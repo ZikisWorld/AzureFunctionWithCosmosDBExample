@@ -10,5 +10,7 @@ namespace DataSyncFunctionApp.DataAccess
     public interface ISqlDataAccess
     {
         Task<IEnumerable<DropdownData>> GetColumnDataAsync(string tableName, string columnName);
+
+        Task<IEnumerable<DropdownData>> GetDataFromSqlAsync(string sqlQuery);
     }
 }

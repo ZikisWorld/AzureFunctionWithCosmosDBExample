@@ -26,5 +26,11 @@ namespace DataSyncFunctionApp.DataAccess
                 return await connection.QueryAsync<DropdownData>(query);
             }
         }
+
+        public async Task<IEnumerable<DropdownData>> GetDataFromSqlAsync(string sqlQuery)
+        {
+            using var connection = new SqlConnection(_connectionString);            
+            return await connection.QueryAsync<DropdownData>(sqlQuery);            
+        }
     }
 }

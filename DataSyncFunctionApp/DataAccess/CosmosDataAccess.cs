@@ -20,14 +20,18 @@ namespace DataSyncFunctionApp.DataAccess
             _container = cosmosClient.GetContainer(databaseId, containerId);
         }
 
-        public async Task UpsertDocumentAsync(string documentId, IEnumerable<DropdownData> data)
+        public async Task UpsertDocumentAsync(MappingModel mappingModel , IEnumerable<DropdownData> data)
         {
+            // Use a fixed id based on the field name to ensure uniqueness
+           // var documentId = $"{fieldNm}-document";
+
             var document = new
             {
-                id = documentId,  // Unique identifier to ensure data replacement
-                Items = data
+                id = mappingModel.DocumentId,
+                fieldName = mappingModel.PartitionValue,  // Partition Value
+                Items = data.Select(d => d.Name)
             };
-            await _container.UpsertItemAsync(document, new PartitionKey(documentId));
+            await _container.UpsertItemAsync(document, new PartitionKey(mappingModel.PartitionValue));
         }
     }
 }
