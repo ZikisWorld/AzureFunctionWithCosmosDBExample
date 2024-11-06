@@ -1,0 +1,15 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_INPROC_NET8_ENABLED": "1",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "SqlConnectionString": "Server=localhost;Database=zikidb;Integrated Security=True;TrustServerCertificate=True;",
+    "CosmosDb:Endpoint": "https://zikicosmos.documents.azure.com:443/",
+    "CosmosDb:Key": "DUPWGwqQoHK2vhBjhWpk9BJA4fjPU7JjUkL9WufHWiPP3Uplq9mZoK38DRockokE9i8gK4RLdACDbT0S4sA==",
+    "CosmosDb:DatabaseId": "DataSyncDB",
+    "CosmosDb:ContainerId": "DropdownDataContainer",
+    "MappingsConfigFile": "Mapping.json", // Relative path for the configuration file
+    "DataSyncSchedule": "0 */5 * * * *" // Default to every 5 minutes for local
+  }
+}
